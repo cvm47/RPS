@@ -14,3 +14,5 @@ function getHumanChoice() {
     let HumanChoice = prompt('choose any one \nLove-Lust-Logic : ')
     return HumanChoice
 }
+
+let humanScore = 0, computerScore = 0
