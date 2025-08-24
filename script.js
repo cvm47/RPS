@@ -42,10 +42,16 @@ function playRound(humanChoice, computerChoice) {
 
         computerScore += 1
     }
-    console.log(`humanScore = ${humanScore} & computerSCore = ${computerScore}`)
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame() {
+    for(let i = 0; i < 5; i++){
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+    }
 
-playRound(humanSelection, computerSelection);
+    console.log(`humanScore = ${humanScore} & computerScore = ${computerScore}`)
+}
+
+playGame()
