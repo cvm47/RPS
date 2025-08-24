@@ -38,6 +38,8 @@ function playGame() {
         }
         else if (humanChoice == "logic" && computerChoice == "lust") {
             console.log(`humanChoice = ${humanChoice} & computerChoice = ${computerChoice}\nYou Win! Logic beats Lust (no it doesn\'t)`)
+
+            humanScore += 1
         }
         // player Lose
         else {
