@@ -16,3 +16,36 @@ function getHumanChoice() {
 }
 
 let humanScore = 0, computerScore = 0
+
+function playRound(humanChoice, computerChoice) {
+    // It's a draw
+    if (humanChoice === computerChoice){
+        console.log(`humanChoice = ${humanChoice} & computerChoice = ${computerChoice}\nIt's a Draw`)
+    }
+    // player Won
+    else if (humanChoice == 'love' && computerChoice == 'logic') {
+        console.log(`humanChoice = ${humanChoice} & computerChoice = ${computerChoice}\nYou Win! Love beats Logic`)
+
+        humanScore += 1
+    }
+    else if (humanChoice == "lust" && computerChoice == 'love') {
+        console.log(`humanChoice = ${humanChoice} & computerChoice = ${computerChoice}\nYou Win! Lust beats Love`)
+
+        humanScore += 1
+    }
+    else if (humanChoice == "logic" && computerChoice == "lust") {
+        console.log(`humanChoice = ${humanChoice} & computerChoice = ${computerChoice}\nYou Win! Logic beats Lust (no it doesn\'t)`)
+    }
+    // player Lose
+    else {
+        console.log(`humanChoice = ${humanChoice} & computerChoice = ${computerChoice}\nYou Lose! ${computerChoice} beats ${humanChoice}`)
+
+        computerScore += 1
+    }
+    console.log(`humanScore = ${humanScore} & computerSCore = ${computerScore}`)
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
