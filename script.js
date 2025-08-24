@@ -9,3 +9,8 @@ function getComputerChoice() {
             return 'Logic'
     }
 }
+
+function getHumanChoice() {
+    let HumanChoice = prompt('choose any one \nLove-Lust-Logic : ')
+    return HumanChoice
+}
