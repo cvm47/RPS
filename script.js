@@ -15,6 +15,9 @@ function getHumanChoice() {
     return HumanChoice
 }
 
+function printResult (humanChoice, computerChoice, message) {
+    console.log(`humanChoice = ${humanChoice} & computerChoice = ${computerChoice}\n${message}`)
+}
 
 
 function playGame() {
@@ -23,27 +26,27 @@ function playGame() {
     function playRound(humanChoice, computerChoice) {
         // It's a draw
         if (humanChoice === computerChoice){
-            console.log(`humanChoice = ${humanChoice} & computerChoice = ${computerChoice}\nIt's a Draw`)
+            printResult(humanChoice, computerChoice, 'It\'s a draw')
         }
         // player Won
         else if (humanChoice == 'love' && computerChoice == 'logic') {
-            console.log(`humanChoice = ${humanChoice} & computerChoice = ${computerChoice}\nYou Win! Love beats Logic`)
+            printResult(humanChoice, computerChoice, 'You Won!')
 
             humanScore += 1
         }
         else if (humanChoice == "lust" && computerChoice == 'love') {
-            console.log(`humanChoice = ${humanChoice} & computerChoice = ${computerChoice}\nYou Win! Lust beats Love`)
+            printResult(humanChoice, computerChoice, 'You Won!')
 
             humanScore += 1
         }
         else if (humanChoice == "logic" && computerChoice == "lust") {
-            console.log(`humanChoice = ${humanChoice} & computerChoice = ${computerChoice}\nYou Win! Logic beats Lust (no it doesn\'t)`)
+            printResult(humanChoice, computerChoice, 'You Won!')
 
             humanScore += 1
         }
         // player Lose
         else {
-            console.log(`humanChoice = ${humanChoice} & computerChoice = ${computerChoice}\nYou Lose! ${computerChoice} beats ${humanChoice}`)
+            printResult(humanChoice, computerChoice, 'You Lose!')
 
             computerScore += 1
         }
