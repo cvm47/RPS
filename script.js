@@ -11,14 +11,13 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let HumanChoice = prompt('choose any one \nLove-Lust-Logic : ').toLowerCase()
-    return HumanChoice
+    let humanChoice = prompt('choose any one \nLove-Lust-Logic : ').toLowerCase()
+    return humanChoice
 }
 
 function printResult (humanChoice, computerChoice, message) {
     console.log(`humanChoice = ${humanChoice} & computerChoice = ${computerChoice}\n${message}`)
 }
-
 
 function playGame() {
     let humanScore = 0, computerScore = 0
@@ -31,23 +30,19 @@ function playGame() {
         // player Won
         else if (humanChoice == 'love' && computerChoice == 'logic') {
             printResult(humanChoice, computerChoice, 'You Won!')
-
             humanScore += 1
         }
         else if (humanChoice == "lust" && computerChoice == 'love') {
             printResult(humanChoice, computerChoice, 'You Won!')
-
             humanScore += 1
         }
         else if (humanChoice == "logic" && computerChoice == "lust") {
             printResult(humanChoice, computerChoice, 'You Won!')
-
             humanScore += 1
         }
         // player Lose
         else {
             printResult(humanChoice, computerChoice, 'You Lose!')
-
             computerScore += 1
         }
     }
