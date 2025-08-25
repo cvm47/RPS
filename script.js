@@ -54,8 +54,7 @@ function playGame() {
     }
 
     console.log(`humanScore = ${humanScore} & computerScore = ${computerScore}`)
-
-    alert('Open the console HANDSOME, to see the score \nand remember nothing beats LUST nothing means nothing except :\nCASTRATION or VASECTOMY')
+    
 }
 
 playGame()
