@@ -19,40 +19,39 @@ function printResult (humanChoice, computerChoice, message) {
     console.log(`humanChoice = ${humanChoice} & computerChoice = ${computerChoice}\n${message}`)
 }
 
-function playGame() {
-    let humanScore = 0, computerScore = 0
+let humanScore = 0, computerScore = 0
 
-    function playRound(humanChoice, computerChoice) {
-        // It's a draw
-        if (humanChoice === computerChoice){
-            printResult(humanChoice, computerChoice, 'It\'s a draw')
-        }
-        // player Won
-        else if (humanChoice == 'love' && computerChoice == 'logic') {
-            printResult(humanChoice, computerChoice, 'You Won!')
-            humanScore += 1
-        }
-        else if (humanChoice == "lust" && computerChoice == 'love') {
-            printResult(humanChoice, computerChoice, 'You Won!')
-            humanScore += 1
-        }
-        else if (humanChoice == "logic" && computerChoice == "lust") {
-            printResult(humanChoice, computerChoice, 'You Won!')
-            humanScore += 1
-        }
-        // player Lose
-        else {
-            printResult(humanChoice, computerChoice, 'You Lose!')
-            computerScore += 1
-        }
+function playRound(humanChoice, computerChoice) {
+    // It's a draw
+    if (humanChoice === computerChoice){
+        printResult(humanChoice, computerChoice, 'It\'s a draw')
     }
-    
-    for(let i = 0; i < 5; i++){
+    // player Won
+    else if (humanChoice == 'love' && computerChoice == 'logic') {
+        printResult(humanChoice, computerChoice, 'You Won!')
+        humanScore += 1
+    }
+    else if (humanChoice == "lust" && computerChoice == 'love') {
+        printResult(humanChoice, computerChoice, 'You Won!')
+        humanScore += 1
+    }
+    else if (humanChoice == "logic" && computerChoice == "lust") {
+        printResult(humanChoice, computerChoice, 'You Won!')
+        humanScore += 1
+    }
+    // player Lose
+    else {
+        printResult(humanChoice, computerChoice, 'You Lose!')
+        computerScore += 1
+    }
+}
+
+function playGame() {
+    for(let i = 0; i < 5; i++) {
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
     }
-
     console.log(`humanScore = ${humanScore} & computerScore = ${computerScore}`)
     
 }
