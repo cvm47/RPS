@@ -15,11 +15,6 @@ function getHumanChoice() {
     return humanChoice
 }
 
-function printResult (humanChoice, computerChoice, message) {
-    console.log(`humanChoice = ${humanChoice} & computerChoice = ${computerChoice}\n${message}`)
-}
-
-
 // div display Result
 let displayResult = document.querySelector('.displayResult')
 
@@ -27,8 +22,7 @@ let humanScore = 0, computerScore = 0
 
 function playRound(humanChoice, computerChoice) {
     // It's a draw
-    if (humanChoice === computerChoice){
-        // printResult(humanChoice, computerChoice, 'It\'s a draw')
+    if (humanChoice === computerChoice) {
         displayResult.textContent = `humanChoice = ${humanChoice}, computerChoice = ${computerChoice}`
     }
     // player Won
@@ -55,6 +49,15 @@ function playRound(humanChoice, computerChoice) {
 const buttons = document.querySelectorAll('button')
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        playRound(button.textContent.toLowerCase(), getComputerChoice())
+        if (humanScore < 5 && computerScore < 5) {
+            playRound(button.textContent.toLowerCase(), getComputerChoice())
+            console.log(`humanScore = ${humanScore} computerScore = ${computerScore}`)
+        }
+        else if (humanScore === 5) {
+            displayResult.textContent = 'Human wins the game!'
+        }
+        else if (computerScore === 5) {
+            displayResult.textContent = 'Clanker Wins the game!'
+        }
     })
 })
