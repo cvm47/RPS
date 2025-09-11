@@ -10,11 +10,6 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
-    let humanChoice = prompt('choose any one \nLove-Lust-Logic : ').toLowerCase()
-    return humanChoice
-}
-
 // div display Result
 let displayResult = document.querySelector('.displayResult')
 
@@ -51,7 +46,6 @@ buttons.forEach((button) => {
     button.addEventListener('click', () => {
         if (humanScore < 5 && computerScore < 5) {
             playRound(button.textContent.toLowerCase(), getComputerChoice())
-            console.log(`humanScore = ${humanScore} computerScore = ${computerScore}`)
             let scoreBoard = document.querySelector('.scoreBoard')
             scoreBoard.textContent = `humanScore = ${humanScore} computerScore = ${computerScore}`
         }
