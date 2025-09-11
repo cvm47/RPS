@@ -52,6 +52,8 @@ buttons.forEach((button) => {
         if (humanScore < 5 && computerScore < 5) {
             playRound(button.textContent.toLowerCase(), getComputerChoice())
             console.log(`humanScore = ${humanScore} computerScore = ${computerScore}`)
+            let scoreBoard = document.querySelector('.scoreBoard')
+            scoreBoard.textContent = `humanScore = ${humanScore} computerScore = ${computerScore}`
         }
         else if (humanScore === 5) {
             displayResult.textContent = 'Human wins the game!'
