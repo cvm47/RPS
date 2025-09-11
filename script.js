@@ -48,12 +48,13 @@ buttons.forEach((button) => {
             playRound(button.textContent.toLowerCase(), getComputerChoice())
             let scoreBoard = document.querySelector('.scoreBoard')
             scoreBoard.textContent = `humanScore = ${humanScore} computerScore = ${computerScore}`
-        }
-        else if (humanScore === 5) {
-            displayResult.textContent = 'Human wins the game!'
-        }
-        else if (computerScore === 5) {
-            displayResult.textContent = 'Clanker Wins the game!'
+            
+            if (humanScore === 5) {
+                displayResult.textContent = 'Human wins the game!'
+            }
+            else if (computerScore === 5) {
+                displayResult.textContent = 'Clanker Wins the game!'
+            }
         }
     })
 })
