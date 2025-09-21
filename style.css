@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+    font-family: monospace;
+    color: #333
+}
+
+h1 {
+    font-size: 64px;
+}
+
+button {
+    height: 55px;
+    width: 110px;
+    font-size: 30px;
+    font-weight:600;
+}
