@@ -29,3 +29,19 @@ h3 {
     justify-content: space-around;
     gap: 15px
 }
+
+.displayResult,
+.scoreBoard {
+    border: 1px solid #a49d9d;
+    border-radius: 3px;
+    height: 45px;
+    width: 550px;
+    padding: 0px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 18px;
+    /* center text vertically & horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
