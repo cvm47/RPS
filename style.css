@@ -1,7 +1,8 @@
 body {
     text-align: center;
     font-family: monospace;
-    color: #333
+    color: #333;
+    margin: 50px 20px;
 }
 
 h1 {
@@ -22,6 +23,7 @@ button {
 
 h3 {
     font-size: 22px;
+    margin-bottom: 40px;
 }
 
 .buttons {
@@ -30,7 +32,7 @@ h3 {
     margin: 50px auto;
     display: flex;
     justify-content: space-around;
-    gap: 15px
+    gap: 20px;
 }
 
 .displayResult,
@@ -52,4 +54,10 @@ h3 {
 button:hover {
     border: 3px solid #333;
     border-radius: 2px;
+}
+
+p {
+    margin-top: 50px;
+    font-size: 13px;
+    color: #555;
 }
